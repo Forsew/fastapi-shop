@@ -1,4 +1,4 @@
-from app.database import Sessionlocal, init_db
+from app.database import SessionLocal, init_db
 from app.models.category import Category
 from app.models.product import Product
 
@@ -164,7 +164,7 @@ def seed_database():
     print("✅ Database tables created")
 
     # Создаем сессию
-    db = Sessionlocal()
+    db = SessionLocal()
 
     try:
         # Проверяем, не заполнена ли уже БД
