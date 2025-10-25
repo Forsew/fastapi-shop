@@ -1,9 +1,4 @@
 <!-- frontend/src/components/Header.vue -->
-<!--
-  Компонент шапки сайта.
-  Содержит логотип, навигацию и счетчик товаров в корзине.
--->
-
 <template>
   <header class="bg-white border-b-2 border-black sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4">
@@ -12,7 +7,9 @@
         <router-link to="/" class="flex items-center space-x-2 group">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 group-hover:scale-110 transition-transform"
+            width="32"
+            height="32"
+            class="group-hover:scale-110 transition-transform"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -46,7 +43,8 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              width="24"
+              height="24"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
