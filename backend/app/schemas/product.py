@@ -28,6 +28,6 @@ class ProductResponse(ProductBase):
         from_attributes = True
 
 
-class ProductListResponse(ProductBase):
+class ProductListResponse(BaseModel):
     products: List[ProductResponse]
     total: int = Field(..., description="Total number of products")

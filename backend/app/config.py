@@ -1,10 +1,11 @@
 from pydantic_settings import BaseSettings
+from typing import List
 
 class Settings(BaseSettings):
     app_name: str = "Fast API shop"
     debug: bool = True
-    database_url: str
-    cors_origin = [
+    database_url: str = "sqlite:///./shop.db"
+    cors_origins: List[str] = [
         "http://localhost:5173",
         "http://localhost:3000",
         "http://127.0.0.1:5173",

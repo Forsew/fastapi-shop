@@ -23,7 +23,7 @@ class ProductService:
                 detail=f"Product with id {product_id} not found"
             )
         return ProductResponse.model_validate(product)
-    
+
     def get_products_by_category(self, category_id: int) -> ProductListResponse:
         category = self.category_repository.get_by_id(category_id)
         if not category:
@@ -35,7 +35,7 @@ class ProductService:
         products = self.product_repository.get_by_category(category_id)
         products_response = [ProductResponse.model_validate(prod) for prod in products]
         return ProductListResponse(products=products_response, total=len(products_response))
-    
+
     def create_product(self, product_data: ProductCreate) -> ProductResponse:
         category = self.category_repository.get_by_id(product_data.category_id)
         if not category:
